@@ -1,0 +1,7 @@
+1.创建mysql用户并授权
+create user 'testuser'@'localhost' identified by 'testpassword';
+create user 'testuser'@'127.0.0.1' identified by 'testpassword';
+grant all privileges on testdb.* to test@localhost identified  by '1234';
+// 修改加密策略用于node连接mysql8
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456'
+flush privileges;
