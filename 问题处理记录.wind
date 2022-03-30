@@ -4,3 +4,8 @@ wind-b-web包跟wind-b-service包中,然后把wind-b-base包删去了。等以�
 循环依赖的问题吧。
 2. docker的mysql修改了密码加密方式，node的mysql插件依旧无法访问mysql，目前不会解决。
 等后面自己做一个docker脚本吧。目前在我电脑上装了一个mysql8
+
+Date 2022-03-30
+1.今天给我的阿里云服务器安装了Jenkins，很可惜的是装上去之后因为阿里云我没有放开端口，所以
+无法访问，放开了端口之后，拉取的jenkinsci/blueocean有问题，装上去之后一直连接jenkins
+失败，目前先换了一个jenkins的docker容器。然后选择了jenkins/jenkins这个容器。

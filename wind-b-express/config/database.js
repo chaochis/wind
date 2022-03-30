@@ -1,4 +1,4 @@
-let mysql = require("mysql2")
+let mysql = require("mysql")
 let mysqlConfig={
   host: 'localhost',
   port: 3308,
@@ -32,13 +32,6 @@ function getConnection() {
  * @returns {Promise<unknown>}
  */
 function commonQuery(sql, params) {
-  /*connection.query(sql, params, (err, results) => {
-    if (err) {
-      reject(err)
-    } else {
-      resolve(results)
-    }
-  })*/
   return new Promise((resolve, reject) => {
     getConnection().then(connection => {
       connection.query(sql, params, (err, results) => {
@@ -83,6 +76,8 @@ function commonTransactionQuery(sql, params) {
     }).catch(err => reject(err))
   })
 }
+
+
 module.exports = {
   getConnection,
   commonQuery,
