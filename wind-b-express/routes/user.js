@@ -1,6 +1,6 @@
 var express = require('express');
-const connection = require("../config/database");
-const {commonQuery} = require("../config/database");
+const connection = require("../config/mysql");
+const {commonQuery} = require("../config/mysql");
 const e = require("express");
 var router = express.Router();
 

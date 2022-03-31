@@ -1,11 +1,12 @@
 let mysql = require("mysql")
+console.log(1)
 let mysqlConfig={
-  host: '139.224.191.231',
-  port: 3306,
-  database : 'wind',
-  user: 'chaochis',
-  password: 'Sh.0516..',
-  connectionLimit : 10
+  host: process.env.DATABASE_IP,
+  port: parseInt(process.env.DATABASE_PORT),
+  database : process.env.DATABASE_NAME,
+  user: process.env.DATABASE_USER_NAME,
+  password: process.env.DATABASE_USER_PASSWORD,
+  connectionLimit : process.env.DATABASE_MAX_CONNECTION
 }
 let pool  = mysql.createPool(mysqlConfig);
 
