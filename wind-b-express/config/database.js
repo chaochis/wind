@@ -1,10 +1,10 @@
 let mysql = require("mysql")
 let mysqlConfig={
-  host: 'localhost',
-  port: 3308,
+  host: '139.224.191.231',
+  port: 3306,
   database : 'wind',
-  user: 'root',
-  password: 'Sh.7947..',
+  user: 'chaochis',
+  password: 'Sh.0516..',
   connectionLimit : 10
 }
 let pool  = mysql.createPool(mysqlConfig);

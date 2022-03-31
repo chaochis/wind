@@ -1,0 +1,43 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/PictureDiy/Index",
+			"style": {
+				"navigationBarTitleText": "自定图片"
+			}
+		},
+		{
+      "path" : "pages/PersonCenter/PersonCenter",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "enablePullDownRefresh": false
+      }
+    }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "超超记忆体",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+	        "color":"#303133",
+	        "selectedColor":"#67C23A",
+	        "backgroundColor":"#FFFFFF",
+	        "borderStyle":"black",
+	        "list":[
+	            {
+	                "pagePath":"pages/PictureDiy/Index",
+	                "text":"图片定制",
+	                "iconPath":"./static/tab-icon/picture-diy.png",
+	                "selectedIconPath":"./static/tab-icon/picture-diy-selected.png"
+	            },
+	            {
+	                "pagePath":"pages/PersonCenter/PersonCenter",
+	                "text":"个人中心",
+	                "iconPath":"./static/tab-icon/personal-center.png",
+	                "selectedIconPath":"static/tab-icon/personal-center-selected.png"
+	            }
+	        ]
+	    }
+}
