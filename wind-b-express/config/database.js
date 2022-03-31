@@ -1,6 +1,6 @@
 let mysql = require("mysql")
 let mysqlConfig={
-  host: '139.224.191.231',
+  host: 'localhost',
   port: 3306,
   database : 'wind',
   user: 'chaochis',
