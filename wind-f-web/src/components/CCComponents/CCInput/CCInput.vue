@@ -4,6 +4,7 @@
            v-bind='$attrs'
            @input='onInput'
            @focus='onFocus'
+           @blur='onBlur'
            v-model='inValue'
            required>
     <label class='cc-input-label'>{{label}}</label>
@@ -26,12 +27,15 @@ const props = defineProps({
     default: null,
   },
 });
-const emit = defineEmits(['update:value', 'focus', 'change']);
+const emit = defineEmits(['update:value', 'focus', 'change', 'onBlur']);
 const onInput = () => {
   emit('update:value', inValue.value);
 };
 const onFocus = (e) => {
   emit('focus', e);
+};
+const onBlur = (e) => {
+  emit('blur', e);
 };
 onMounted(async () => {
   await nextTick();

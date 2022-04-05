@@ -1,7 +1,7 @@
 <template>
-  <div v-bind='$attrs'>
+  <a class='cc-link' v-bind='$attrs'>
     <slot name='default'></slot>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -10,6 +10,13 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style lang='scss' scoped>
+.cc-link{
+  color: $theme-color;
+  font-size: 12px;
+  cursor: pointer;
+  &:hover{
+    border-bottom: solid 1px $theme-color;
+  }
+}
 </style>

@@ -67,8 +67,6 @@
           background-color: #000;
           border-radius: 100%;
           position: absolute;
-          left: 5px;
-          top: 5px;
         }
       }
       .cc-panda-nose {
@@ -205,8 +203,10 @@
       margin-top: 25px;
     }
     .cc-forget-area{
-      font-size: 8px;
-      transform: scale(0.8);
+      width: 40%;
+      display: block;
+      margin-top: 5px;
+      text-align: right;
     }
   }
 

@@ -3,12 +3,11 @@ import { defineConfig } from 'vite';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import eslintPlugin from 'vite-plugin-eslint';
 import * as path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx(), eslintPlugin()],
+  plugins: [vue(), vueJsx()],
   base: '/',
   minify: 'esbuild',
   server: {
