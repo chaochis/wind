@@ -17,3 +17,57 @@ Date 2022-03-31
   telnet172.a.b.c 3306也可以连通，但是无法在本机上telnet 139.a.b.c 3306连通，提示
   time out，不知道怎么解决这个问题。有人说可以修改hosts文件，但并不能解决问题。
 2.最终采用了从命令行获取参数然后加载不同的url来取数据库，然后生产的用内网ip去访问数据库。
+3.然后遇到了个问题，查询完毕后忘记关掉mysql数据库了。随之补上了关闭数据库的操作。
+
+Data 2022-04-01
+1.今天接到一个需求，因为element的$confirm在移动端表现不佳，会挤在页面最上方，所以需要修改
+成指定样式的对话框。我一开始想的只是用el-dialog去替换掉原本的$confirm，后来想了想，在网上搜了
+一下如果写指定的样式的对话框，然后挂载到dom上。最后找到了一篇文档通过Vue.extends封装了一下
+el-dialog，从而达成全局替换$confirm的效果。
+2. 今天花了一个小时在express项目里给我的实体类写了一个转换器，因为一直在思索如何把mvc模式应用在
+node程序端，然后想到了一个用转换器的思路来实现。
+
+Date 2022-04-02
+1.今天接到的需求是将Layui的layer样式替换成element的那个confirm的样式，我觉得在移动端用
+element不是一个很好的选择。还好layer的样式还是比较好替换掉的。
+2.今天我的风旅博客进度没太快，因为我又想做游戏了。曾以为已经放下了，没想到随着事件的流逝，对游戏的念
+想却越来越深了，但是出于现实考虑，我觉得应该一心铺在前端上，太难受了。
+3.搭建vite2+vue3的时候，scss的配置路径已经变了。现在得在vite.config.js里面引入全局配置得scss文件了。
+
+Date 2022-04-04
+1.今天遇到了个问题，用additionalData引入了scss文件，但是样式没生效，百度了好久，都没有解决问题，后来才看到一篇文章。
+他上面是这样说的, "只有在main.js引入一个其余scss文件或者在.vue文件中应用<style lang=”scss”><style>，并且外面
+有内容，则 scss.additionalData 配置的全局scss文件就能够正确引入了。还倡议咱们在 scss.additionalData 引入的文
+件最好只写scss变量，别写css变量，因为css变量是运行时属性"。不得已我在App.vue引入了那个全局样式文件。
+2.借着写熊猫登录界面又重温了一下absolute跟relative定位。（记忆力好像出问题了，relative跟absolute定位看过好多次了，
+也用了好多次，就是记不住。）
+(1)relative相对定位, 没有脱离文档流，相对于原来的位置偏移。absolute绝对定位，元素脱离定位（absolute w3school解释
+absolute的元素于最近的定位祖先元素(就是设置了position属性的元素，设置为static的不算)进行定位（而不是相对于视口定位，如
+fixed）。然而，如果绝对定位的元素没有祖先，它将使用文档主体（body）
+，并随页面滚动一起移动）。
+(2)通常用法，最外层用relative偏移，内层用absolute定位。
+3.借着写熊猫登录界面重温了一下css的组合选择器(哎，平常都是用一种选择器，其他的都快忘光了)。
+(1)选择div元素内的所有p元素。div p{}
+(2)选择所有div元素子元素的所有p元素。 div > p{}
+(3)选择同时具有container，left类的元素。 .container.left{}
+(4)选择紧随div元素之后的所有p元素。div + p{}
+(5)选择属于div元素的同级元素的所有p元素。 div ~ p{}
+4.今天又学到一个知识
+border-radius: 100px 100px 100px 100px / 126px 126px 96px 96px;
+展开后是:
+border-top-left-radius: 100px 126px;
+border-top-right-radius: 100px 126px;
+border-bottom-right-radius: 100px 96px;
+border-bottom-left-radius: 100px 96px;
+左边的是水平直径，右边的是垂直直径。
+5.我知道我为什么访问不到scss文件了，因为我引入写成了@/src/assets/style/allStyle.scss,不能加入src的，我要被自己蠢死了。
+6.组件改为异步懒加载方式后，组件的生命周期顺序会发生变化。具体原因也是因为使用了异步导致子组件最后才加载，这里不做详述。
+1）使用同步写法时顺序为：父created->子created->子mounted->父mounted
+2）使用异步写法时顺序为：父created->父mounted->子created->子mounted
+7.今天eslint爆了一个错,Failed to load plugin '@babel/plugin-syntax-dynamic-import' declared in '.eslintrc.js'
+百度没有找出来办法，目前是换了eslint+airbnb的解决办法。顺便，我的wind-f-mobile我该写成了ts项目，但是vue爆红了。目前还不知道是什
+么原因，明天在看吧。
+
+Date 2022-04-05
+1. 昨天vue爆红可能是idea发疯了吧，今天他自己好了。
+

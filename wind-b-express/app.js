@@ -3,13 +3,10 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const routers = require('./routes/index')
 // const sassMiddleware = require('node-sass-middleware');
-const cors = require('cors')
-
-const userRouter = require('./routes/user');
 
 const app = express();
-app.use(cors({credentials: true, origin: ['localhost:80', 'localhost:8100'],headers:'X-Requested-With,Content-Type,username',methods:'PUT,POST,GET,DELETE,OPTIONS'}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,9 +22,9 @@ app.use(cookieParser());
 //   indentedSyntax: true, // true = .sass and false = .scss
 //   sourceMap: true
 // }));
-app.use(express.static(path.join(__dirname, 'public')));
+routers(app)
 
-app.use('/user', userRouter);
+app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,5 +41,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
