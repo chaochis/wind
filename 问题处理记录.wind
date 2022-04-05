@@ -70,4 +70,5 @@ border-bottom-left-radius: 100px 96px;
 
 Date 2022-04-05
 1. 昨天vue爆红可能是idea发疯了吧，今天他自己好了。
+2. 几天前弄坏了服务器上的jenkins，今天他自己又好了，可能是网络波动的问题吧。导致以前老是安装不上jenkins
 

@@ -27,26 +27,33 @@
       <div class="cc-panda-hand left"></div>
       <div class="cc-panda-hand right"></div>
       <h1>用户登录</h1>
-      <CCInput class="cc-input-area" v-model:value='loginUser.userName'></CCInput>
+      <CCInput class="cc-input-area" :label='"用户名"' v-model:value='loginUser.userName'></CCInput>
+      <CCInput class="cc-input-area"
+               :type='"password"'
+               :label='"密码"'
+               :maxlength='maxLength'
+               v-model:value='loginUser.userPassword'>
+      </CCInput>
       <div class='cc-button-area'>
-        <CCButton class='mr-5'>登录</CCButton>
+        <CCButton @click='showValue' class='mr-5'>登录</CCButton>
         <CCButton>注册</CCButton>
       </div>
+      <div class='cc-forget-area'>忘记密码</div>
     </div>
   </div>
 </template>
 
 <script setup>
 // eslint-disable-next-line no-unused-vars
-import { onMounted, reactive } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 
-// eslint-disable-next-line no-unused-vars
+const maxLength = ref(16);
 const loginUser = reactive({
   userName: 22, userPassword: null,
 });
-// eslint-disable-next-line no-unused-vars
-const mounted = onMounted(() => {
-});
+const showValue = () => {
+  console.log(loginUser);
+};
 </script>
 <script>
 export default {

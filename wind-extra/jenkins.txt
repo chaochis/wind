@@ -1,0 +1,26 @@
+ubuntu18.04安装jenkins:
+
+1. 安装jdk8
+sudo apt update
+sudo apt install openjdk-8-jdk
+
+2. 导入jenkins密钥库
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+
+3. 将jenkins存储库导入系统列表
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+4. 安装更新jenkins
+sudo apt update
+sudo apt install jenkins
+
+5. 查看jenkins状态
+systemctl status jenkins
+
+6. 修改启动端口
+sudo cp /etc/default/jenkins  /etc/default/jenkins.bak # 备份
+sudo sed -i "s@HTTP_PORT=8080@HTTP_PORT=8897@g" /etc/default/jenkins
+sudo systemctl restart jenkins #重启
+
+7. 查看初始密码
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword

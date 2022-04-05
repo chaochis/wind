@@ -1,7 +1,12 @@
 <template>
   <div class='cc-input-item'>
-    <input class='cc-input-content' @input='onInput' v-model='inValue' type="text" required>
-    <label class='cc-input-label'>用户名</label>
+    <input class='cc-input-content'
+           v-bind='$attrs'
+           @input='onInput'
+           @focus='onFocus'
+           v-model='inValue'
+           required>
+    <label class='cc-input-label'>{{label}}</label>
   </div>
 </template>
 
@@ -16,10 +21,17 @@ const props = defineProps({
     type: [String, Number, null, undefined],
     default: null,
   },
+  label: {
+    type: [String, null, undefined],
+    default: null,
+  },
 });
-const emit = defineEmits(['input', 'focus', 'change']);
+const emit = defineEmits(['update:value', 'focus', 'change']);
 const onInput = () => {
-  emit('input', inValue.value);
+  emit('update:value', inValue.value);
+};
+const onFocus = (e) => {
+  emit('focus', e);
 };
 onMounted(async () => {
   await nextTick();
