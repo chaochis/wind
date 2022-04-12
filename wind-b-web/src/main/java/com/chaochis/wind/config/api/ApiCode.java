@@ -1,4 +1,4 @@
-package com.chaochis.wind.api;
+package com.chaochis.wind.config.api;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;

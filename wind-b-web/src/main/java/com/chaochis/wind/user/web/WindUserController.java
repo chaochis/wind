@@ -1,6 +1,6 @@
 package com.chaochis.wind.user.web;
 
-import com.chaochis.wind.api.ApiResult;
+import com.chaochis.wind.config.api.ApiResult;
 import com.chaochis.wind.user.service.WindUserService;
 import com.chaochis.wind.user.vo.WindUser;
 import org.springframework.beans.factory.annotation.Autowired;

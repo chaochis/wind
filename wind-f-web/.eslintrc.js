@@ -1,4 +1,5 @@
 module.exports = {
+  // 使用airbnb会导致idea的eslint检测机制不同步
   extends: ['plugin:vue/vue3-essential', 'airbnb-base'],
   env: {
     browser: true,

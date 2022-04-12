@@ -1,0 +1,27 @@
+%container-all{
+  height: 100%;
+  width: 100%;
+}
+html{
+  @extend %container-all;
+  body{
+    @extend %container-all;
+    margin: 0;
+    #app{
+      @extend %container-all;
+    }
+  }
+}
+.cc-container{
+  @extend %container-all;
+}
+.cc-container-fullscreen{
+  overflow: hidden;
+  @extend %container-all;
+}
+.cc-container-center{
+  @extend %container-all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

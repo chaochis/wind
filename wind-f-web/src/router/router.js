@@ -16,7 +16,7 @@ const routes = [
     redirect: { name: routeNameEnum.Home },
     children: [
       {
-        path: '/home', component: ccComponents.Home, name: routeNameEnum.Home, meta: { title: '首页' },
+        path: '/', component: ccComponents.Home, name: routeNameEnum.Home, meta: { title: '首页' },
       },
     ],
   },

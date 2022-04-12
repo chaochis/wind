@@ -1,16 +1,16 @@
 <template>
-  <div>
 
-  </div>
 </template>
 
 <script setup>
+
 </script>
 <script>
 export default {
-  name: 'PageHome',
+  name: 'CCMenu',
 };
 </script>
+
 <style scoped>
 
 </style>
