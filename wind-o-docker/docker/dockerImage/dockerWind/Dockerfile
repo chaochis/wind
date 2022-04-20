@@ -1,1 +1,1 @@
-FROM localhost:5000/wind
+FROM localhost:5000/windweb
