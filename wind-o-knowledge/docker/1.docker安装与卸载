@@ -1,0 +1,10 @@
+ubuntu 18.04 卸载docker
+1. 卸载 Docker 引擎、CLI 和 Containerd 软件包：
+sudo apt-get purge docker-ce docker-ce-cli containerd.io
+2. 主机上的映像、容器、卷或自定义配置文件不会自动删除。要删除所有映像、容器和卷：
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+
+ubuntu 18.04 安装docker
+1. 安装命令
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
