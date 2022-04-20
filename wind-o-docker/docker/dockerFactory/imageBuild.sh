@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #制作wind3专属镜像
-docker tag wind 127.0.0.1:5000/dockerWindWeb
-docker push 127.0.0.1:5000/dockerWindWeb
-docker rmi 127.0.0.1:5000/dockerWindWeb
+docker tag dockerWindWeb 127.0.0.1:5000/windweb
+docker push 127.0.0.1:5000/windweb
+docker rmi 127.0.0.1:5000/windweb
 
 #docker rmi -f $(docker images -aq)
 
