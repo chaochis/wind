@@ -10,6 +10,7 @@
   <artifactId>wind-b-service</artifactId>
   <version>1.0.0</version>
   <name>wind-b-service</name>
+  <packaging>jar</packaging>
   <description>wind-b-service</description>
   <properties>
     <java.version>1.8</java.version>
@@ -65,11 +66,24 @@
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>${spring.alibaba-druid.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.chaochis</groupId>
+      <artifactId>wind-b-base</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
-      <plugin>
+      <!--<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <testFailureIgnore>true</testFailureIgnore>
+        </configuration>
+      </plugin>-->
+      <!--<plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
@@ -80,7 +94,7 @@
             </exclude>
           </excludes>
         </configuration>
-      </plugin>
+      </plugin>-->
     </plugins>
   </build>
 

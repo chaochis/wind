@@ -1,0 +1,12 @@
+server:
+  port: 8099
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/wind?useUnicode=true&characterEncoding=utf8
+      username: chaochis
+      password: Sh.0516..
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: localhost
+    port: 6379

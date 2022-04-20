@@ -1,9 +1,11 @@
+server:
+  port: 8089
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://localhost:3307/wind3?useUnicode=true&characterEncoding=utf8
+      url: jdbc:mysql://localhost:3308/wind?useUnicode=true&characterEncoding=utf8
       username: root
-      password: 123456
+      password: Sh.7947..
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
     host: localhost

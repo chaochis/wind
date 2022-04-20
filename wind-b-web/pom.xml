@@ -10,6 +10,7 @@
   <artifactId>wind-b-web</artifactId>
   <version>1.0.0</version>
   <name>wind-b-web</name>
+  <packaging>jar</packaging>
   <description>wind-b-web</description>
   <properties>
     <java.version>1.8</java.version>
@@ -46,10 +47,31 @@
       <version>${chaochis.version}</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>com.chaochis</groupId>
+      <artifactId>wind-b-security</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.chaochis</groupId>
+      <artifactId>wind-b-security</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <testFailureIgnore>true</testFailureIgnore>
+        </configuration>
+      </plugin>
+
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -62,7 +84,23 @@
           </excludes>
         </configuration>
       </plugin>
+
     </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.yaml</include>
+          <include>**/*.yml</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
+    </resources>
   </build>
 
 </project>

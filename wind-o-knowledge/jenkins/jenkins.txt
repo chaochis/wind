@@ -24,3 +24,11 @@ sudo systemctl restart jenkins #重启
 
 7. 查看初始密码
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+ubuntu18.04 卸载jenkins
+1. 卸载服务
+apt remove jenkins
+
+2. 卸载配置数据
+apt purge jenkins

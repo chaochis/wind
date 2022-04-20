@@ -4,12 +4,13 @@ import App from './App.vue';
 import { router } from './router/router';
 import '@/assets/style/all_style.scss';
 import CCComponents from './components/CCComponents';
+import vconsole from 'vconsole'
 
 const app = createApp(App);
 app.use(router);
 app.mount('#app');
 app.use(CCComponents);
-
+new vconsole()
 app.config.globalProperties.$axios = axios;
 
 // 默认情况下，Vue 会移除/压缩模板元素之间的空格以产生更高效的编译结果：

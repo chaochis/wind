@@ -21,6 +21,15 @@ let userStatus = Object.freeze({
   'Deleted': 2
 })
 
+let userSex = Object.freeze({
+  0: 'Secret',
+  1: 'Man',
+  2: 'WoMan',
+  'Secret': 0,
+  'Man': 1,
+  'WoMan': 2,
+})
+
 module.exports = {
-  userStatus,userType,apiCode
+  userStatus,userType,apiCode,userSex
 }

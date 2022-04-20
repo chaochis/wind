@@ -1,0 +1,19 @@
+{
+  "name": "design-mode",
+  "version": "1.0.0",
+  "description": "这篇是js,ts版本的设计模式介绍",
+  "main": "main.ts",
+  "scripts": {
+    "ts": "ts-node main.ts"
+  },
+  "keywords": [
+    "设计模式"
+  ],
+  "author": "刘超/chaochis",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.24",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}

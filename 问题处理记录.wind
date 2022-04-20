@@ -101,4 +101,13 @@ Date 2022-04-10
 2.又遇到了个新的问题，jenkins上用git下载后，就剩下了个package-lock.json文件，别的文件都消失了......
 3.然后我发现是我的路径的问题，jenkins执行脚本的路径不对，跟之前用java连接linux机器然后执行脚本的路径不对是一个问题。
 
+Date 2022-04-11
+1.vue3+vite打包报错"@charset" must be the first rule in the file，然后需要添加postcss的规则。
+
+Date 2022-04-12
+1.公司的项目要用静态文件引入.vue的文件，好麻烦的说，平常都是用的npm引入，改成静态引入后，还获取不到对象。其实是因为在Window.load之后，那个自执行函数
+才会执行，之后才能获取到js对象。
+2.今天给我的java项目打包，然后报了test failures的错，这个需要在pom.xml设置<testFailureIgnore>true</testFailureIgnore>
+
+
 

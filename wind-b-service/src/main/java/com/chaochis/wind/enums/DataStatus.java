@@ -1,20 +1,26 @@
 package com.chaochis.wind.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
+import com.chaochis.wind.base.enums.BaseEnum;
+import lombok.Getter;
 
 /**
  * 数据状态
  * @author chaochis
  */
-public enum DataStatus {
+@Getter
+public enum DataStatus implements BaseEnum {
   /**
-   *
+   * 0 - 未激活状态 1 - 正常状态 2 - 已删除
    */
-  Normal(1);
+  Inactivated(0, "未激活"),
+  Normal(1, "正常"),
+  Deleted(2, "已删除");
   @EnumValue
   private final Integer value;
-  DataStatus(Integer value) {
+  private final String text;
+  DataStatus(Integer value, String text) {
     this.value = value;
+    this.text = text;
   }
-
 }

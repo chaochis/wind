@@ -8,6 +8,10 @@
 5. wind-f-mobile 风旅博客的移动端
 6. wind-f-uni 风旅博客的小程序端
 
+**运行:**
+
+1. 后台api接口是wind-b-web, 用idea运行时需要在jvm 
+
 **致谢:**
 
 本项目参考了以下项目:

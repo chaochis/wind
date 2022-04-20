@@ -7,7 +7,8 @@ import lombok.ToString;
 import java.io.Serializable;
 
 /**
- * @author chao
+ * 统一返回的json格式的数据类
+ * @author 刘超/chaochis
  */
 @Data
 @ToString
@@ -38,4 +39,5 @@ public class ApiResult<T> implements Serializable {
   private static <T> ApiResult<T> build(String msg, T result, ApiCode apiCode) {
     return new ApiResult<T>(msg, result, apiCode);
   }
+
 }
