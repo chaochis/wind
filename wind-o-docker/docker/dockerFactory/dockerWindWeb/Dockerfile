@@ -8,5 +8,3 @@ RUN apk add --no-cache npm
 RUN apk add --no-cache git
 RUN apk add --no-cache nginx
 ADD config/nginx.conf /etc/nginx/conf.d/
-ADD config/run.sh /home/wind/build/
-CMD ['bin/bash /home/wind/build/run.sh']
