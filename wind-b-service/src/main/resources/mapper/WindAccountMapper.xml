@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chaochis.wind.user.mapper.WindAccountMapper">
+  <resultMap id="BaseResultMap" type="com.chaochis.wind.user.vo.WindAdminAccount">
+    <id column="account_id" jdbcType="VARCHAR" property="accountId" />
+    <result column="account_name" jdbcType="VARCHAR" property="accountName"/>
+    <result column="account_type" jdbcType="INTEGER" property="accountType"/>
+    <result column="account_type_text" jdbcType="VARCHAR" property="accountTypeText" />
+    <result column="account_status" jdbcType="INTEGER" property="accountStatus"/>
+    <result column="account_status_text" jdbcType="VARCHAR" property="accountStatusText" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+    <result column="create_by_id" jdbcType="VARCHAR" property="createById"/>
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
+    <result column="update_by_id" jdbcType="VARCHAR" property="updateById"/>
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate"/>
+    <result column="login_ip" jdbcType="VARCHAR" property="loginIp"/>
+    <result column="login_date" jdbcType="TIMESTAMP" property="loginDate"/>
+    <result column="account_password" jdbcType="VARCHAR" property="accountPassword"/>
+    <result column="account_password_salt" jdbcType="VARCHAR" property="accountPasswordSalt"/>
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+ubuntu18.04系统搭建教程:
+1. 配置环境
+apt-get update
+apt-get install -y curl openssh-server ca-certificates
+apt-get install -y postfix
+安装postfix邮件服务器的时候，选择Internet site，填入自己的域名就可以了
+2. 修改配置
+cd /tmp
+curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
+ls /tmp/script.deb.sh #查看一下脚本是否正确下载
+sudo bash /tmp/script.deb.sh #执行脚本
+sudo apt install gitlab-ce #安装
+3. 修改基本配置
+sudo vim /etc/gitlab/gitlab.rb
+# 修改如下
+external_url 'https://192.168.85.135:8081'
+4.重启服务
+sudo gitlab-ctl reconfigure #重新加载配置文件
+sudo gitlab-ctl restart #重启服务
+sudo gitlab-ctl status
+
+ZtqfFtEPRiYhbm9tfsf2na+6BL1CidzenmihAqYKtKE=
+

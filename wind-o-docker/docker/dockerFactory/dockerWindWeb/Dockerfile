@@ -11,6 +11,4 @@ RUN apk add --no-cache npm
 RUN apk add --no-cache git
 RUN apk add --no-cache nginx
 ADD config/nginx.conf /etc/nginx/conf.d/
-RUN useradd -ms /bin/bash wind
-USER wind
 WORKDIR /home/wind
