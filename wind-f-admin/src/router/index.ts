@@ -1,19 +1,31 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '@/views/HomeView.vue';
+import { HomePage, LayoutView, routeNameEnum, WxUserPage } from '@/router/router_components';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    component: LayoutView,
+    redirect: { name: routeNameEnum.homePage },
+    children: [
+      {
+        path: '/home-page',
+        component: HomePage,
+        name: routeNameEnum.homePage,
+      }
+    ]
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/user-menu',
+    component: LayoutView,
+    redirect: { name: routeNameEnum.wxUserPage },
+    children: [
+      {
+        path: '/user-menu/wx-user',
+        name: routeNameEnum.wxUserPage,
+        component: WxUserPage
+      }
+    ]
   }
 ]
 

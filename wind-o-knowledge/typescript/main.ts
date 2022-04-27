@@ -1,6 +1,5 @@
-// 1.工厂模式
 import { deepCopy } from './util';
-
+// 1.工厂模式
 {
   interface Shape {
     draw: () => void;
@@ -217,3 +216,37 @@ import { deepCopy } from './util';
     }
   }
 }
+
+// 6.适配器模式
+{
+  // 原日志接口
+  interface LogFactory{
+    debug(tag: string, message: string): void
+  }
+
+  // 第三方日志接口以及实现
+  interface CCLogFactory{
+    ccDebug(message: string, ...args: Array<Object>): void;
+  }
+
+  class CCLogFactoryImpl implements CCLogFactory{
+    ccDebug(message: string, ...args: Array<Object>): void {
+      console.log('日志第三方接口: '+ message + args)
+    }
+  }
+
+  // 适配的类
+  class LogAdapter implements LogFactory{
+    private ccLog: CCLogFactoryImpl;
+    constructor(ccLog: CCLogFactoryImpl) {
+      this.ccLog = ccLog;
+    }
+    debug(tag: string, message: string): void{
+      this.ccLog.ccDebug(message, '是真的', '好')
+    }
+  }
+
+  let log = new LogAdapter(new CCLogFactoryImpl());
+  log.debug("属性:", "你是");
+}
+

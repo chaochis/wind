@@ -48,16 +48,14 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.chaochis</groupId>
-      <artifactId>wind-b-security</artifactId>
-      <version>1.0.0</version>
-      <scope>compile</scope>
+      <groupId>com.github.binarywang</groupId>
+      <artifactId>weixin-java-miniapp</artifactId>
+      <version>${wx.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.chaochis</groupId>
-      <artifactId>wind-b-security</artifactId>
-      <version>1.0.0</version>
-      <scope>compile</scope>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk15on</artifactId>
+      <version>1.70</version>
     </dependency>
   </dependencies>
 

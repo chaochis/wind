@@ -1,3 +1,7 @@
+wind:
+  wx:
+    appid: wx87bf5644ba49df45
+    secret: 6f81b81da3dfae55fd958d21a2acf41e
 server:
   port: 8089
 spring:
@@ -10,3 +14,4 @@ spring:
   redis:
     host: localhost
     port: 6379
+

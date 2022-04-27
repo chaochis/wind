@@ -1,7 +1,7 @@
-package com.chaochis.wind.exception.web;
+package com.chaochis.wind.exceptions.web;
 
 import com.chaochis.wind.config.api.ApiResult;
-import com.chaochis.wind.exception.PermissionNotAllowedException;
+import com.chaochis.wind.exceptions.exceptionVo.PermissionNotAllowedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

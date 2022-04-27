@@ -14,7 +14,8 @@ public enum AccountType implements BaseEnum {
   UserName(0, "用户名"),
   PhoneNumber(1, "手机号"),
   Email(2, "邮箱"),
-  UnionId(3, "微信小程序的唯一id");
+  UnionId(3, "微信小程序的唯一id"),
+  OpenId(4, "微信小程序的openId");
   @EnumValue
   private final Integer value;
   private final String text;

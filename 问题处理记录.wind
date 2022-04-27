@@ -109,5 +109,12 @@ Date 2022-04-12
 才会执行，之后才能获取到js对象。
 2.今天给我的java项目打包，然后报了test failures的错，这个需要在pom.xml设置<testFailureIgnore>true</testFailureIgnore>
 
+Date 2022-04-23
+1.今天又学到一个css属性,contain,这个可以告诉浏览器,以下的dom节点是独立，可以让浏览器识别到，从而只对部分元素做回流重绘
+contain: none; /* 表示元素将正常渲染，没有包含规则 */
+contain: layout; /* 表示元素外部无法影响元素内部的布局，反之亦然 */
+contain: paint; /* 表示这个元素的子孙节点不会在它边缘外显示。如果一个元素在视窗外或因其他原因导致不可见，则同样保证它的子孙节点不会被显示。 */
+contain: size; /* 表示这个元素的尺寸计算不依赖于它的子孙元素的尺寸 */
 
-
+contain: content; /* 等价于 contain: layout paint */
+contain: strict; /* 等价于 contain: size layout paint */

@@ -15,7 +15,6 @@
   <modules>
     <module>wind-b-web</module>
     <module>wind-b-service</module>
-    <module>wind-b-security</module>
     <module>wind-b-base</module>
   </modules>
 
@@ -23,7 +22,7 @@
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
     <chaochis.version>1.0.0</chaochis.version>
-    <spring.version>2.6.5</spring.version>
+    <spring.version>2.6.6</spring.version>
     <spring.jdbc.version>2.6.6</spring.jdbc.version>
     <spring.redis.version>2.6.6</spring.redis.version>
     <spring.mybatis.version>2.2.2</spring.mybatis.version>
@@ -33,6 +32,8 @@
     <log4j.version>2.7</log4j.version>
     <mysql.version>8.0.28</mysql.version>
     <lombok.version>1.18.22</lombok.version>
+    <wx.version>4.3.1.B</wx.version>
+    <bcprov.version>1.70</bcprov.version>
   </properties>
     <dependencies>
     </dependencies>

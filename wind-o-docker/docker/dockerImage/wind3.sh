@@ -8,8 +8,8 @@
 
 docker build -t wind ./dockerWind
 docker rm wind -f
-docker run -itd --name wind -p 80:80 -p 3306:3306 wind
+docker run -itd --name wind -p 80:80 wind
 
 
 # docker部署jenkins
-docker run -p 8080:8080 -p 50000:50000 -v jenkins_data:/var/jenkins_home jenkinsci/blueocean
+# docker run -p 8080:8080 -p 50000:50000 -v jenkins_data:/var/jenkins_home jenkinsci/blueocean

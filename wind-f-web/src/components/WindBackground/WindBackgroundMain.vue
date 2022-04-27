@@ -1,6 +1,7 @@
 <template>
   <teleport to='#app'>
     <div class='cc-container wind-background'>
+
     </div>
   </teleport>
 </template>

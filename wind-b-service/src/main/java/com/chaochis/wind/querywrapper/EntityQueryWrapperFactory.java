@@ -10,7 +10,7 @@ import java.lang.reflect.Modifier;
  * @author chaochis
  * 该类用于将entity对象生成Mybatis-Plus查询所需要的QueryMapper
  */
-public class EntityQueryWrapperFactory<T> {
+public class EntityQueryWrapperFactory {
   /**
    * 生成QueryMapper
    * @param entity 生成原始对象
@@ -18,7 +18,7 @@ public class EntityQueryWrapperFactory<T> {
    * @return 返回生成的QueryMapper对象
    */
   public static <T> QueryWrapper<T> createQueryWrapper(T entity) {
-    QueryWrapper<T> queryWrapper = new QueryWrapper<T>();
+    QueryWrapper<T> queryWrapper = new QueryWrapper<>();
     if (null != entity) {
       Field [] fields = entity.getClass().getDeclaredFields();
       try {
@@ -29,7 +29,7 @@ public class EntityQueryWrapperFactory<T> {
             // 目前先不判断TableId, 如果有TableField注解就取TableField注解，没有就取本身那个字段名
             TableField paramName = field.getDeclaredAnnotation(TableField.class);
             String fieldName = null == paramName ? field.getName() : paramName.value();
-            queryWrapper.setEntity(entity);
+            queryWrapper.eq(fieldName, field.get(entity));
           }
         }
       } catch (Exception e) {
