@@ -5,12 +5,14 @@ let __instance = (() => {
     return instance
   }
 })()
+/**
+ * 单例状态类
+ */
 class Store{
   constructor() {
     if (__instance()) return __instance()
     __instance(this)
   }
 }
-export default{
-  store: new Store()
-}
+let store  = new Store()
+export default{ store}

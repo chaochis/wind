@@ -1,6 +1,6 @@
 <template>
   <div class='cc-container wind-app'>
-<!--    <WindBackgroundMain></WindBackgroundMain>
+    <WindBackgroundMain></WindBackgroundMain>
     <header class='wind-banner' id='banner'>
       <div class='wind-left'>
         <WindLogo :title='windTitle' :name='windName'></WindLogo>
@@ -8,7 +8,7 @@
       <div class='wind-right'>
         登录
       </div>
-    </header> -->
+    </header>
     <div class='wind-content'>
       <router-view></router-view>
     </div>

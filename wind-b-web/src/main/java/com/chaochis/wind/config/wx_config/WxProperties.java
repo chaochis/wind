@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class WxProperties {
   // 小程序的appid
   private String appid;
+
   // 小程序的密钥
   private String secret;
 }

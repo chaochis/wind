@@ -1,5 +1,6 @@
 import apis from "../../apis/apis"
 import wxApis from "../../apis/wxApis"
+import store from "../../store/store"
 
 // pages/personal-center/index.js
 Page({
@@ -25,5 +26,6 @@ Page({
       encryptedInfo: resInfo.encryptInfo
     }
     let token = await apis.wxLogin(data)
+    store.token = token
   }
 })

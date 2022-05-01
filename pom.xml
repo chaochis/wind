@@ -34,6 +34,8 @@
     <lombok.version>1.18.22</lombok.version>
     <wx.version>4.3.1.B</wx.version>
     <bcprov.version>1.70</bcprov.version>
+    <pageHelper.version>1.4.2</pageHelper.version>
+    <aspectj.version>1.9.9.1</aspectj.version>
   </properties>
     <dependencies>
     </dependencies>

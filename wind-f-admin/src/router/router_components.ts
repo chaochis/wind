@@ -1,5 +1,3 @@
-import { DefineComponent } from 'vue';
-
 const LayoutView = () => import('../views/Layout/Layout.vue')
 const WxUserPage = () => import('../views/MainMenu/UserMenu/WxUser/WxUserList.vue')
 const HomePage = () => import('../views/MainMenu/HomePage/HomePage.vue')

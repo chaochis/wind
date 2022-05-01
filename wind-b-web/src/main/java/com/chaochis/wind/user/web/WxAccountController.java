@@ -4,27 +4,28 @@ import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.api.WxMaUserService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import com.chaochis.wind.config.api.ApiResult;
+import com.chaochis.wind.config.page_config.NeedPageHelper;
 import com.chaochis.wind.exceptions.exceptionVo.ParamsEmptyException;
+import com.chaochis.wind.user.params.WxAccountQueryVo;
 import com.chaochis.wind.user.params.WxLoginRequestParams;
 import com.chaochis.wind.user.service.WxAccountService;
 import com.chaochis.wind.user.vo.WxAccount;
+import com.chaochis.wind.util.AESUtil;
 import com.chaochis.wind.util.IpUtil;
 import com.chaochis.wind.util.id_generator.UuidGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @author 刘超/chaochis
  */
 @RestController
-@RequestMapping("/user")
-public class WxUserLoginController {
+@RequestMapping("/wxAccount")
+public class WxAccountController {
 
   @Autowired
   private WxAccountService wxAccountService;
@@ -48,11 +49,18 @@ public class WxUserLoginController {
     return ApiResult.success(wxAccount.getToken());
   }
 
+  @PostMapping("/getWxAccountList")
+  @NeedPageHelper
+  public ApiResult<List<WxAccount>> getWxAccountList(@RequestBody WxAccountQueryVo vo) {
+    return ApiResult.success(this.wxAccountService.getWxAccountList());
+  }
+
+
   private WxAccount getAccountFromWxLoginParams(WxLoginRequestParams params, HttpServletRequest request) throws Exception{
     WxMaUserService wxUserMaService = this.wxMaService.getUserService();
     WxMaJscode2SessionResult result = wxUserMaService.getSessionInfo(params.getCode());
     // 暂时不用，因为获取不到union_id
-   /* if(result.getUnionid() == null){
+    /*if(result.getUnionid() == null){
       String sessionKey = result.getSessionKey();
       String encryptedResult = AESUtil.decrypt(params.getEncryptedInfo().getEncryptedData(), sessionKey, params.getEncryptedInfo().getIv(), "UTF-8");
     }*/

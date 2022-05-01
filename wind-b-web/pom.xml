@@ -55,7 +55,23 @@
     <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcprov-jdk15on</artifactId>
-      <version>1.70</version>
+      <version>${bcprov.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper-spring-boot-starter</artifactId>
+      <version>${pageHelper.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.mybatis</groupId>
+          <artifactId>mybatis</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
     </dependency>
   </dependencies>
 
