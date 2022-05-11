@@ -2,13 +2,14 @@
 import { ApiCode, ApiResult, Page, RequestUrlEnum } from '@/config/api_config/apis_class';
 import { Method } from 'axios';
 import { request } from '@/config/api_config/request';
-import { WxAccount } from '@/views/MainMenu/UserMenu/WxUser/WxUser';
+import { QueryWxAccount, WxAccount } from '@/views/MainMenu/UserMenu/WxUser/WxUser';
 import { reactive } from 'vue';
 
 /**
  * 统一的请求方法
  * @param urlName 请求地址，只支持enum
- * @param config { data: any, params: any, method: any } 参数配置
+ * @param config { data: any, params: any, method: Method } 参数配置
+ * @return Promise<ApiResult<T>>
  */
 function apiSend<T>(urlName: RequestUrlEnum, config: { data?: any, params?: any, method: Method }) : Promise<ApiResult<T>> {
   return new Promise((resolve, reject) => {
@@ -38,7 +39,7 @@ function apiSend<T>(urlName: RequestUrlEnum, config: { data?: any, params?: any,
  * 获取全部用户列表
  * @param data 查询参数
  */
-function getWxAccountList(data: WxAccount | Page | null) : Promise<ApiResult<WxAccount[]>> {
+function getWxAccountList(data: QueryWxAccount | Page | null) : Promise<ApiResult<WxAccount[]>> {
   return apiSend<WxAccount[]>(RequestUrlEnum.wxUserGetList, { data: data, method: 'post'})
 }
 

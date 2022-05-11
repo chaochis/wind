@@ -20,8 +20,12 @@ function convert(obj, type) {
     for(let mapItem of this.convertMap) {
       const targetName = type ? mapItem.voName : mapItem.dataName
       const originName = type ? mapItem.dataName : mapItem.voName
-      if (mapItem.enumType) {
-        convertItem[targetName] = modelTransfer(mapItem.enumType[objItem[originName]])
+      if (mapItem.transferType) {
+        if (mapItem.transferType.type === 'enum') {
+          convertItem[targetName] = modelTransfer(mapItem.transferType.enumType[objItem[originName]])
+        } else {
+          
+        }
       } else {
         convertItem[targetName] = modelTransfer(objItem[originName])
       }

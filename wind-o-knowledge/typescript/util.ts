@@ -16,7 +16,7 @@ function getAllKeys (obj : Object): Array<string | number | symbol> {
   }
   return <Array<string | number | symbol>>keys;
 }
-function deepCopy(obj: Object): Object {
+function deepCopy(obj: Object, map = new WeakMap): Object {
   let newObj = {}
   let type = Object.prototype.toString.call(obj).slice(8, -1);
   if (type === 'Undefined' || type === 'Null' || type === 'Number' || type === 'String') {

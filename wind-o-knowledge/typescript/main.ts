@@ -250,3 +250,88 @@ import { deepCopy } from './util';
   log.debug("属性:", "你是");
 }
 
+// 7.代理模式
+{
+  // 游戏玩家角色(抽象主题颜色)
+  interface GamePlayer{
+    play: (username: string, password: string) => void;
+  }
+  class RealPlayer implements GamePlayer {
+      play(username : string, password : string) {
+        console.log(`username: ${username}正在上分`)
+      }
+  }
+  class ProxyRealPlayer implements GamePlayer {
+    private gamePlayer!: GamePlayer;
+    constructor(gamePlayer : GamePlayer) {
+      this.gamePlayer = gamePlayer;
+    }
+    play(username : string, password : string) {
+      console.log(`${username}正在登录`)
+      this.gamePlayer.play(username, password);
+      console.log(`${username}退出游戏`)
+    }
+  }
+  let myPlayer = new ProxyRealPlayer(new RealPlayer());
+  myPlayer.play("lipeng", "ikey");
+}
+
+// 8.装饰模式
+{
+  // 构建角色:智能硬件
+  interface HardWare{
+    show: () => void;
+  }
+
+  class Phone implements HardWare {
+      show(){
+        console.log("能打电话");
+        console.log("能写短信");
+      }
+  }
+  class Wristband implements HardWare {
+      show(){
+        console.log("能够计时");
+        console.log("能够计步")
+      }
+  }
+
+  class Decorator implements HardWare{
+    show() {
+    }
+  }
+
+  class ColorScreen extends Decorator {
+    private hardWare: HardWare;
+    constructor(hardWare : HardWare) {
+      super();
+      this.hardWare = hardWare;
+    }
+    show() {
+      this.hardWare.show();
+      console.log("彩色屏幕");
+    }
+  }
+  class BlueTooth extends Decorator {
+    private hardWare: HardWare;
+    constructor(hardWare : HardWare) {
+      super();
+      this.hardWare = hardWare;
+    }
+    show() {
+      this.hardWare.show();
+      console.log("蓝牙模块");
+    }
+  }
+
+  let phone: HardWare = new Phone();
+  phone = new ColorScreen(phone);
+  phone = new BlueTooth(phone);
+  phone.show();
+}
+
+let s = {
+  name: "dd"
+}
+let n: {name: string} = <{name: string}>deepCopy(s)
+console.log(n.name)

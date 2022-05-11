@@ -4,7 +4,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import router from './router'
 import store from './config/store_config'
-
+import '@/assets/style/all_style.scss'
 const app = createApp(App)
 app.use(ElementPlus)
 app.use(store)

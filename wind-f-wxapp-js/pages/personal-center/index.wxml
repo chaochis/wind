@@ -1,6 +1,2 @@
 <!--pages/personal-center/index.wxml-->
-<view>
-  <view class="cc-login-area" >
-    <button bindtap="goLogin" open-type="getUserInfo" wx:if="{{userInfo === null}}">登录</button>
-  </view>
-</view>
+<text>pages/personal-center/index.wxml</text>

@@ -36,6 +36,7 @@
     <bcprov.version>1.70</bcprov.version>
     <pageHelper.version>1.4.2</pageHelper.version>
     <aspectj.version>1.9.9.1</aspectj.version>
+    <jackson.version>2.13.2</jackson.version>
   </properties>
     <dependencies>
     </dependencies>

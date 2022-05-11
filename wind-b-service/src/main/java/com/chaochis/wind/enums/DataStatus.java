@@ -2,6 +2,7 @@ package com.chaochis.wind.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.chaochis.wind.base.enums.BaseEnum;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;
 
 /**
@@ -17,6 +18,7 @@ public enum DataStatus implements BaseEnum {
   Normal(1, "正常"),
   Deleted(2, "已删除");
   @EnumValue
+  @JsonValue
   private final Integer value;
   private final String text;
   DataStatus(Integer value, String text) {

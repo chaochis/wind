@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  mounted() {
+    alert(1)
+  }
 }
 </script>
 

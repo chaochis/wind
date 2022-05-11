@@ -3,7 +3,8 @@ const WxUserPage = () => import('../views/MainMenu/UserMenu/WxUser/WxUserList.vu
 const HomePage = () => import('../views/MainMenu/HomePage/HomePage.vue')
 enum routeNameEnum {
   wxUserPage = 'WxUserPage',
-  homePage = 'HomePage'
+  homePage = 'HomePage',
+  layout = 'layoutPage',
 }
 export {
   LayoutView,

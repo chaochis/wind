@@ -5,7 +5,7 @@ let wxApiRoot = 'http://localhost:8089/';
 
 // 后端的api信息
 let apiInfo = {
-  wxLogin: { url: wxApiRoot + 'user/loginOrRegisterByWx', method: 'post'} // 登录接口
+  wxLogin: { url: wxApiRoot + 'wxAccount/loginOrRegisterByWx', method: 'post'} // 登录接口
 }
 
 /**

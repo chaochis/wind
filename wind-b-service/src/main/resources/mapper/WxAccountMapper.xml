@@ -13,5 +13,15 @@
     <result column="login_date" jdbcType="TIMESTAMP" property="loginDate"/>
     <result column="token" jdbcType="VARCHAR" property="token"/>
     <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+    <result column="account_status" jdbcType="INTEGER" property="accountStatus"/>
+    <result column="account_status_text" jdbcType="VARCHAR" property="accountStatusText"/>
   </resultMap>
+  <select id="getWxAccountList" resultType="com.chaochis.wind.user.vo.WxAccount">
+    select account_id, union_id, open_id, wx_nick_name, wx_avatar, register_ip, login_ip, register_date, login_date, token, wx.user_id, account_status, account_status_text from wx_account wx
+    left join wind_user wind on wx.user_id = wind.user_id
+    <where>
+      <if test="wxNickName != null and wxNickName != ''">AND wx_nick_name like concat('%', #{wxNickName}, '%')</if>
+      <if test="accountStatus != null"> AND account_status = #{accountStatus}</if>
+    </where>
+  </select>
 </mapper>
