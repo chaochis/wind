@@ -1,0 +1,42 @@
+wind:
+  cors:
+    # 是否启用跨域，默认启用
+    enable: true
+    # CORS过滤的路径，默认：/**
+    path: /**
+    # 允许访问的源
+    allowed-origins: '*'
+    # 允许访问的请求头
+    allowed-headers: '*'
+    # 是否允许发送cookie
+    allow-credentials: false
+    # 允许访问的请求方式
+    allowed-methods: OPTION,GET,POST
+    # 允许响应的头
+    exposed-headers: auth
+    # 该响应的有效时间默认为30分钟，在有效时间内，浏览器无须为同一请求再次发起预检请求
+    max-age: 1800
+  security:
+    login-url: '/user/login'
+
+server:
+  port: 8090
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3308/wind?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: Sh.7947..
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: localhost
+    port: 6379
+mybatis-plus:
+  type-enums-package:
+    com.chaochis.wind.enums
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    default-enum-type-handler:
+      org.apache.ibatis.type.EnumOrdinalTypeHandler
+
+

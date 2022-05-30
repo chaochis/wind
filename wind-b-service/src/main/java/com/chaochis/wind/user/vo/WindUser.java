@@ -3,7 +3,7 @@ package com.chaochis.wind.user.vo;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.chaochis.wind.base.vo.BaseVo;
+import com.chaochis.wind.vo.BaseVo;
 import com.chaochis.wind.enums.DataStatus;
 import com.chaochis.wind.enums.UserSex;
 import lombok.Getter;
@@ -102,13 +102,6 @@ public class WindUser implements Serializable, BaseVo {
      */
     @TableField("user_real_name")
     private String userRealName;
-
-    /**
-     * 用户状态中文解释
-     */
-    @TableField("user_status_text")
-    private String userStatusText;
-
 
     private static final long serialVersionUID = 1L;
 }

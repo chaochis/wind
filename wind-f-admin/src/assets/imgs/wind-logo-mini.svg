@@ -1,0 +1,32 @@
+<svg width="215" height="76" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" class="svg-canvas">
+ <g>
+  <title>Layer 1</title>
+  <g id="background">
+   <!---->
+  </g>
+  <g id="shape_WjeasnSGy3" transform="translate(203.042 213.221) scale(1 1)" stroke="null">
+   <g id="svg_34" stroke="null" transform="matrix(0.55949 0 0 0.471251 -90.5425 -112.095)">
+    <svg version="1.1" id="svg_2" x="-201" y="-212" viewBox="0 0 395 238.3" xml:space="preserve" width="263.33126" height="158.86542" class="style-removed" preserveAspectRatio="none" data-parent="shape_WjeasnSGy3" stroke="null" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+     <g id="svg_3" stroke="null">
+      <polygon points="90.4,180.4 90.5,180.4 90.5,180.3 68.5,143.6 56.1,123 56,122.7 51.6,115.4 0,180.4 43,180.4    2.8,238.3 136.3,238.3 163.3,199.4 77.3,199.4  " fill="#00B1F2" stroke-width="0" id="svg_8" stroke="null"/>
+      <polygon points="312.2,113.9 290.2,77.3 277.8,56.5 277.6,56.8 232.1,114.2 226.3,121.6 316.8,121.6 312.4,114.2  " fill="#00B1F2" stroke-width="0" id="svg_6" stroke="null"/>
+      <polygon points="352,56.5 391.3,0 168.1,0 83,122.7 83.1,122.7 105,159.3 122.1,187.8 173.6,122.7 130.4,122.7    188.5,39 316.8,39 304.6,56.5 304.5,56.5 304.6,56.6 326.5,93.3 326.5,93.3 339.1,114.2 343.5,121.6 349.3,114.2 395,56.5  " fill="#00B1F2" stroke-width="0" id="svg_4" stroke="null"/>
+     </g>
+    </svg>
+   </g>
+  </g>
+  <g stroke="null" id="shape_TvHgcvc28t" transform="translate(216.068 -27.7814) scale(1 1)">
+   <g stroke="null" id="svg_40" transform="matrix(0.514877 0 0 0.434029 -68.2721 44.53)">
+    <svg stroke="null" version="1.1" width="680.56" height="730.12" viewBox="0 0 680.56 730.12" id="svg_20" x="-251.18325" y="-266.75821" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+     <g stroke="null" data-width="280.59101" id="svg_21">
+      <path stroke="#1a2844" d="m124.96,371.49l12.49,-32.56l15.38,0l2.8,32.56l13.48,-34.46l16.29,0l-22.98,56.54l-17.28,0l-3.9,-27.77l-11.48,27.77l-17.28,0l-6.7,-54.64l-1.89,-1.9l18.18,0l2.89,34.46z" fill="#1a2844" stroke-width="0.166" data-glyph-w="89.50144" data-glyph-h="129.857" data-glyph-ascender="99.89" data-glyph-descender="-29.967" id="svg_25"/>
+      <path stroke="#1a2844" d="m198.18144,337.03l23.07,0l-8.69,56.54l-18.18,0l6.7,-52.75l-2.9,-3.79z" fill="#1a2844" stroke-width="0.166" data-glyph-w="36.85941" data-glyph-h="129.857" data-glyph-ascender="99.89" data-glyph-descender="-29.967" id="svg_24"/>
+      <path stroke="#1a2844" d="m234.54085,337.03l23.08,0l20.07,35.46l4.8,-35.46l16.38,0l-7.69,56.54l-19.18,0l-19.18,-34.57l-4.79,34.57l-17.28,0l7.69,-52.75l-3.9,-3.79z" fill="#1a2844" stroke-width="0.166" data-glyph-w="77.11508" data-glyph-h="129.857" data-glyph-ascender="99.89" data-glyph-descender="-29.967" id="svg_23"/>
+      <path stroke="#1a2844" d="m311.65594,337.03l64.33,0l-6.79,49.84q0,2.9 -2.35,4.8q-2.35,1.9 -5.24,1.9l0,0l-53.74,0l6.69,-52.75l-2.9,-3.79zm45.15,9.59l-23.07,0l-5.7,37.36l22.98,0l5.79,-37.36z" fill="#1a2844" stroke-width="0.166" data-glyph-w="77.11508" data-glyph-h="129.857" data-glyph-ascender="99.89" data-glyph-descender="-29.967" id="svg_22"/>
+     </g>
+    </svg>
+   </g>
+  </g>
+ </g>
+
+</svg>

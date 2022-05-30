@@ -40,7 +40,7 @@ function apiSend<T>(urlName: RequestUrlEnum, config: { data?: any, params?: any,
  * @param data 查询参数
  */
 function getWxAccountList(data: QueryWxAccount | Page | null) : Promise<ApiResult<WxAccount[]>> {
-  return apiSend<WxAccount[]>(RequestUrlEnum.wxUserGetList, { data: data, method: 'post'})
+  return apiSend<WxAccount[]>(RequestUrlEnum.wxUserGetList, { params: data, method: 'get'})
 }
 
 export const apiMethod = {

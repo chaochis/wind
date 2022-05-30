@@ -1,37 +1,17 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import { HomePage, LayoutView, routeNameEnum, WxUserPage } from '@/router/router_components';
+import { constantRoutes } from '@/router/constant_routes/constant_routes';
+import { asyncRoutes } from '@/router/async_routes/async_routes';
 
 
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    component: LayoutView,
-    redirect: { name: routeNameEnum.homePage },
-    children: [
-      {
-        path: '/home-page',
-        component: HomePage,
-        name: routeNameEnum.homePage,
-      }
-    ]
-  },
-  {
-    path: '/user-menu',
-    component: LayoutView,
-    redirect: { name: routeNameEnum.wxUserPage },
-    children: [
-      {
-        path: '/user-menu/wx-user',
-        name: routeNameEnum.wxUserPage,
-        component: WxUserPage
-      }
-    ]
-  }
+const allRouter:Array<RouteRecordRaw> = [
+  ...constantRoutes,
+  ...asyncRoutes
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes: allRouter
 })
 
 export default router
+

@@ -3,7 +3,7 @@ package com.chaochis.wind.user.vo;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.chaochis.wind.base.vo.concret.BaseAccount;
+import com.chaochis.wind.vo.concret.BaseAccount;
 import com.chaochis.wind.enums.AccountType;
 import com.chaochis.wind.enums.DataStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -14,7 +14,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * 微信账户表(token更新不被视为信息更改)

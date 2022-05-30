@@ -11,9 +11,9 @@
             <img :src='row.wxAvatar' height='50' width='50' alt='' />
           </template>
         </el-table-column>
-        <el-table-column prop='loginDate' label='最近登录时间' width='160' />
+        <el-table-column prop='loginDate' label='最近登录时间' width='180' />
         <el-table-column prop='loginIp' label='最近登录ip' width='130' />
-        <el-table-column prop='registerDate' label='注册时间' width='160' />
+        <el-table-column prop='registerDate' label='注册时间' width='180' />
         <el-table-column prop='registerIp' label='注册ip' width='130'/>
         <el-table-column prop='accountStatusText' label='账号状态'></el-table-column>
         <el-table-column fixed="right" label="操作" width="300">

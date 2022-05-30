@@ -1,0 +1,11 @@
+.wind-sidebar-container{
+  background: #FFFFFF !important;
+  height: 100%;
+  width: 100%;
+  >>> .el-scrollbar__wrap{
+    background: transparent !important;
+  }
+  >>> .el-scrollbar__view{
+    background: transparent !important;
+  }
+}

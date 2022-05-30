@@ -1,9 +1,10 @@
-/**
- * 对外发起请求的axios对象
- */
+
 import axios, { AxiosInstance } from 'axios';
 import qs from 'qs';
 
+/**
+ * 对外发起请求的axios对象
+ */
 const req: AxiosInstance = axios.create({
   baseURL: "http://localhost:8089",
   timeout: 60000,

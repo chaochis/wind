@@ -16,13 +16,14 @@
     <module>wind-b-web</module>
     <module>wind-b-service</module>
     <module>wind-b-base</module>
+    <module>wind-b-wxweb</module>
   </modules>
 
   <properties>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <chaochis.version>1.0.0</chaochis.version>
-    <spring.version>2.6.6</spring.version>
+    <spring.version>2.6.7</spring.version>
     <spring.jdbc.version>2.6.6</spring.jdbc.version>
     <spring.redis.version>2.6.6</spring.redis.version>
     <spring.mybatis.version>2.2.2</spring.mybatis.version>
@@ -37,6 +38,7 @@
     <pageHelper.version>1.4.2</pageHelper.version>
     <aspectj.version>1.9.9.1</aspectj.version>
     <jackson.version>2.13.2</jackson.version>
+    <commons-codec.version>1.13</commons-codec.version>
   </properties>
     <dependencies>
     </dependencies>

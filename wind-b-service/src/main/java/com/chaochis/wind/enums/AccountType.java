@@ -2,7 +2,6 @@ package com.chaochis.wind.enums;
 
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
-import com.chaochis.wind.base.enums.BaseEnum;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;
 

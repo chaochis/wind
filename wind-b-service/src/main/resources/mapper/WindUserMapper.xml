@@ -4,12 +4,9 @@
   <resultMap id="BaseResultMap" type="com.chaochis.wind.user.vo.WindUser">
     <id column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="user_nick_name" jdbcType="VARCHAR" property="userNickName" />
-    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
-    <result column="user_password_salt" jdbcType="VARCHAR" property="userPasswordSalt" />
     <result column="user_level" jdbcType="INTEGER" property="userLevel" />
     <result column="user_avatar" jdbcType="VARCHAR" property="userAvatar" />
     <result column="user_status" jdbcType="INTEGER" property="userStatus" />
-    <result column="user_status_text" jdbcType="VARCHAR" property="userStatusText" />
     <result column="user_mobile" jdbcType="VARCHAR" property="userMobile" />
     <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
     <result column="user_sex" jdbcType="VARCHAR" property="userSex" />

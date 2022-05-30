@@ -1,7 +1,7 @@
 <template>
   <div class='wind-layout'>
     <div class='wind-side-bar'>
-
+      <SideBar></SideBar>
     </div>
     <div class='wind-content-area'>
       <div class='wind-header'>
@@ -16,6 +16,7 @@
 <script lang='ts' setup>
 import HeaderComponent from '@/views/Layout/Components/Header/Header.vue';
 import AppMain from '@/views/Layout/Components/AppMain/AppMain.vue';
+import SideBar from '@/views/Layout/Components/SideBar/SideBar.vue';
 </script>
 <script lang='ts'>
 import { defineComponent } from 'vue';
@@ -32,20 +33,20 @@ export default defineComponent({
   display: flex;
   overflow: hidden;
   .wind-side-bar{
-    width: 120px;
+    width: 180px;
     height: 100%;
   }
   .wind-content-area{
-    width: calc(100% - 120px);
+    width: calc(100% - 180px);
     height: 100%;
     .wind-header{
-      width: calc(100%);
-      height: 74px;
+      width: 100%;
+      height: 44px;
       box-shadow: 0 0 12px 43 rgba(0,0,0, 0.12);
     }
     .wind-main-container{
       width: calc(100%);
-      height: calc(100% - 74px);
+      height: calc(100% - 44px);
       overflow: hidden;
     }
   }

@@ -123,3 +123,9 @@ Date 2022-05-11
 1.遇到了个问题，就是之前写的扫描二维码那个组件，谁知道let getUserMedia = navigator.mediaDevices.getUserMedia这个方法，用左边的就不行，右边
 的就可以调用。问题应该是出在了getUserMedia内部，连续调用时可能this指向已经不是navigator.mediaDevices了，调用前需要用
 call(navigator.mediaDevices)修改下this指向。
+
+Date 2022-05-17
+1.今天遇到一个问题，就是那个svn提交一直提示某个文件remains in conflict
+
+Date 2022-05-23
+1.遇到一个问题，就是uni-app的onReachBottom事件死活不触发，后面了解到是因为view没有高度，设置100%也不行，设置父view为height: initial;就能触发了

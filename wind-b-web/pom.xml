@@ -13,7 +13,7 @@
   <packaging>jar</packaging>
   <description>wind-b-web</description>
   <properties>
-    <java.version>1.8</java.version>
+    <java.version>17</java.version>
   </properties>
   <dependencies>
     <dependency>
@@ -51,22 +51,6 @@
       <groupId>com.github.binarywang</groupId>
       <artifactId>weixin-java-miniapp</artifactId>
       <version>${wx.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcprov-jdk15on</artifactId>
-      <version>${bcprov.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.pagehelper</groupId>
-      <artifactId>pagehelper-spring-boot-starter</artifactId>
-      <version>${pageHelper.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.mybatis</groupId>
-          <artifactId>mybatis</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.aspectj</groupId>

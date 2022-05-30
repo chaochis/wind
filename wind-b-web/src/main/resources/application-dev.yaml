@@ -1,7 +1,4 @@
 wind:
-  wx:
-    appid: wx87bf5644ba49df45
-    secret: 6f81b81da3dfae55fd958d21a2acf41e
   cors:
     # 是否启用跨域，默认启用
     enable: true
@@ -19,8 +16,11 @@ wind:
     exposed-headers: auth
     # 该响应的有效时间默认为30分钟，在有效时间内，浏览器无须为同一请求再次发起预检请求
     max-age: 1800
+  security:
+    login-url: '/user/login'
+
 server:
-  port: 8089
+  port: 8091
 spring:
   datasource:
     druid:
