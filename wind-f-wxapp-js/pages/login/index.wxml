@@ -1,9 +1,0 @@
-<!--pages/personal-center/index.wxml-->
-<view class="wind-login-background">
-  <view class="wind-login-area">
-  </view>
-  <image src="/assets/img/wind-logo.png"></image>
-  <!-- <view class="cc-login-area" >
-    <button bindtap="goLogin" open-type="getUserInfo" wx:if="{{userInfo === null}}">登录</button>
-  </view> -->
-</view>

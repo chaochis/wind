@@ -92,6 +92,12 @@ public class WxAccountController {
     return ApiResult.success(true);
   }
 
+  /**
+   * 物理删除微信用户
+   * @param accountId 账户id
+   * @return 是否成功删除
+   * @throws Exception 删除异常
+   */
   @GetMapping("/deleteWxUser")
   public ApiResult<Boolean> deleteWxAccount(String accountId) throws Exception {
     this.wxAccountService.deleteWxAccount(accountId);

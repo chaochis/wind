@@ -1,4 +1,4 @@
-package com.chaochis.windbadminweb.security_config;
+package com.chaochis.windbadminweb.config.security_config;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 
