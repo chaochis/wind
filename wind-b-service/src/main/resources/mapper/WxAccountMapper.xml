@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chaochis.wind.user.mapper.WxAccountMapper">
-  <resultMap id="BaseResultMap" type="com.chaochis.wind.user.vo.WxAccount">
+  <resultMap id="WxAccountMap" type="com.chaochis.wind.user.vo.WxAccount">
     <id column="account_id" jdbcType="VARCHAR" property="accountId" />
     <result column="union_id" jdbcType="VARCHAR" property="unionId" />
     <result column="open_id" jdbcType="VARCHAR" property="openId" />
@@ -18,10 +18,13 @@
   </resultMap>
   <select id="getWxAccountList" resultType="com.chaochis.wind.user.vo.WxAccount">
     select account_id, union_id, open_id, wx_nick_name, wx_avatar, register_ip, login_ip, register_date, login_date, token, wx.user_id, account_status, account_status_text from wx_account wx
-    left join wind_user wind on wx.user_id = wind.user_id
     <where>
       <if test="wxNickName != null and wxNickName != ''">AND wx_nick_name like concat('%', #{wxNickName}, '%')</if>
       <if test="accountStatus != null"> AND account_status = #{accountStatus}</if>
     </where>
+  </select>
+  <select id="getBoundWindUser" resultMap="com.chaochis.wind.user.mapper.WindUserMapper.WindUserMap">
+    select user_id, user_level, user_status, user_nick_name, user_sex, user_sex_text, user_avatar, user_email, user_mobile, user_real_name
+    from wind_user where user_id in ( select user_id from wx_account where account_id = #{wxAccountId} )
   </select>
 </mapper>

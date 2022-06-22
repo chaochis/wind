@@ -1,4 +1,4 @@
-package com.chaochis.wind.user.params;
+package com.chaochis.windbadminweb.user.params;
 
 import com.chaochis.wind.config.page_config.page_vo.RequestPage;
 import lombok.Getter;

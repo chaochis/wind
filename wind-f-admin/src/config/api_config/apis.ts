@@ -21,15 +21,14 @@ function apiSend<T>(urlName: RequestUrlEnum, config: { data?: any, params?: any,
     });
     req.then(res => {
       if ((res.headers['content-type']).includes('application/json')) {
-        const data = reactive(res.data) as ApiResult<T>
-        console.log(data)
+        const data = res.data as ApiResult<T>
         if (data.apiCode === ApiCode.Success) {
           resolve(data)
         } else {
           resolve(data)
         }
       }
-      resolve(reactive(res.data) as ApiResult<T>)
+      resolve(res.data as ApiResult<T>)
     }).catch(reason => {
       reject(reason)
     })

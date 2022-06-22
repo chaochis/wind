@@ -4,21 +4,21 @@ import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;
 
 /**
- * 用户性别
+ * 小说类型
  * @author 刘超/chaochis
  */
 @Getter
-public enum UserSex implements BaseEnum {
+public enum NovelType implements BaseEnum{
   /**
-   * 0 - 未激活状态 1 - 男 2 - 女
+   * 0 - 长篇小说 1 - 短篇小说 2 - 小说片段
    */
-  Inactivated(0, "未激活"),
-  Normal(1, "男"),
-  Deleted(2, "女");
+  LongNovel(0, "长篇小说"),
+  ShortNovel(1, "短篇小说"),
+  NovelFragment(2, "小说片段");
   @EnumValue
   private final Integer value;
   private final String text;
-  UserSex(Integer value, String text) {
+  NovelType(Integer value, String text) {
     this.value = value;
     this.text = text;
   }

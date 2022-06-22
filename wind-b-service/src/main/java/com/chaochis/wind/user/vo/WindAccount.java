@@ -2,6 +2,7 @@ package com.chaochis.wind.user.vo;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.chaochis.wind.vo.BaseVo;
 import com.chaochis.wind.vo.concret.BaseAccount;
 import com.chaochis.wind.enums.AccountType;
 import com.chaochis.wind.enums.DataStatus;
@@ -20,7 +21,7 @@ import java.util.Date;
 @Setter
 @ToString
 @TableName("wind_account")
-public class WindAccount implements Serializable, BaseAccount {
+public class WindAccount implements Serializable, BaseVo {
   /**
    * 账户id
    */

@@ -5,19 +5,19 @@ export enum ApiCode {
 }
 
 // 分页类
-export class Page {
-  pageLimit!: number; // 一页有多少数据
-  pageIndex!: number; // 第几页
+export interface Page {
+  pageLimit: number; // 一页有多少数据
+  pageIndex: number; // 第几页
   total?: number; // 数据总量
   order?: string; // 排序字段
 }
 
 // 请求结果类
-export class ApiResult<T> {
-  page!: Page | null; // 分页数据
-  msg!: string | null; // 数据请求失败后返回的信息
-  apiCode!: ApiCode; // 请求状态
-  result!: T; // 返回的结果
+export interface ApiResult<T> {
+  page: Page | null; // 分页数据
+  msg: string | null; // 数据请求失败后返回的信息
+  apiCode: ApiCode; // 请求状态
+  result: T; // 返回的结果
 }
 
 // 请求的后端地址的枚举
@@ -26,6 +26,6 @@ export const enum RequestUrlEnum {
   wxUserGetList = '/wxAccount/getWxAccountList' // 获取微信账户列表
 }
 
-export class AuthToken{
-  token!: string;
+export interface AuthToken{
+  token: string;
 }

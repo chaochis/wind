@@ -9,7 +9,7 @@
 <script setup lang='ts'>
 import { reactive } from 'vue';
 
-let logo = reactive(require("@/assets/imgs/wind-logo.svg"));
+let logo = require("@/assets/imgs/wind-logo.svg");
 </script>
 <script lang='ts'>
 export default {

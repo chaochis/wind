@@ -1,6 +1,7 @@
 package com.chaochis.wind.user.service;
 
 import com.chaochis.wind.common_exceptions.UserHasTombstoneException;
+import com.chaochis.wind.user.vo.WindUser;
 import com.chaochis.wind.user.vo.WxAccount;
 
 import java.util.List;
@@ -18,7 +19,9 @@ public interface WxAccountService {
 
   void updateWxAccount(WxAccount wxAccount);
 
-  void tombstoneWxAccount(WxAccount wxAccount) throws UserHasTombstoneException;
+  void tombstoneWxAccount(String accountId) throws UserHasTombstoneException;
 
   void deleteWxAccount(String accountId) throws Exception;
+
+  WindUser getWxBoundWindUserByAccountId(String accountId);
 }

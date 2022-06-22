@@ -3,6 +3,7 @@ package com.chaochis.wind.user.vo;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.chaochis.wind.vo.BaseVo;
 import com.chaochis.wind.vo.concret.BaseAccount;
 import com.chaochis.wind.enums.AccountType;
 import com.chaochis.wind.enums.DataStatus;
@@ -23,7 +24,7 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @TableName("wx_account")
-public class WxAccount implements Serializable, BaseAccount {
+public class WxAccount implements Serializable, BaseVo {
   /**
    * 账户id
    */
