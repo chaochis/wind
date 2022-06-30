@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chaochis.wind.novel.mapper.WindNovelMapper">
+  <resultMap id="WindUserMap" type="com.chaochis.wind.novel.vo.WindNovel">
+    <id column="novel_id" jdbcType="VARCHAR" property="novelId" />
+    <result column="novel_no" jdbcType="VARCHAR" property="novelNo"/>
+    <result column="novel_type" jdbcType="VARCHAR" property="novelName"/>
+    <result column="novel_type_text" jdbcType="VARCHAR" property="novelName"/>
+    <result column="novel_describe" jdbcType="VARCHAR" property="novelName"/>
+    <result column="novel_text_to_reader" jdbcType="VARCHAR" property="novelTextToReader"/>
+    <result column="novel_status" jdbcType="VARCHAR" property="novelStatus"/>
+    <result column="novel_status_text" jdbcType="VARCHAR" property="novelStatusText"/>
+    <result column="novel_count" jdbcType="INTEGER" property="novelCount"/>
+    <result column="novel_fabulous_count" jdbcType="INTEGER" property="novelFabulousCount"/>
+    <result column="novel_flow_count" jdbcType="INTEGER" property="novelFlowCount"/>
+    <result column="novel_collection_count" jdbcType="INTEGER" property="novelCollectionCount"/>
+    <result column="create_by_id" jdbcType="VARCHAR" property="createById"/>
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate"/>
+    <result column="novel_group" jdbcType="VARCHAR" property="novelGroup"/>
+  </resultMap>
+  <select id="getNovelList" resultType="com.chaochis.wind.novel.vo.WindNovel">
+    select novel_id, novel_no, novel_name, novel_type, novel_type_text, novel_describe, novel_text_to_reader,
+           novel_status, novel_status_text, novel_count, novel_fabulous_count, novel_flow_count, novel_read_count, novel_collection_count, create_by_id, create_date, update_date, novel_group
+    from wind_novel
+    <where>
+      <if test="novelName != null and novelName != ''">AND novel_name like concat('%', #{novelName}, '%')</if>
+      <if test="novelStatus != null and novelStatus !=''">AND novelStatus = #{novelStatus}</if>
+      <if test="novelType != null and novelName != ''">AND novel_type = #{novelType}</if>
+      <if test="createById != null and createById != ''">AND create_by_id = #{createById}</if>
+      <if test="novelGroup != null and novelGroup != ''">AND novelGroup = #{novelGroup}</if>
+    </where>
+  </select>
+</mapper>

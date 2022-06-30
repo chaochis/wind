@@ -98,7 +98,7 @@ public class WindNovel implements Serializable, BaseVo {
    * 创造该小说的人的id
    */
   @TableField("create_by_id")
-  private String CreateById;
+  private String createById;
   /**
    * 创造该小说的时间
    */
@@ -117,5 +117,5 @@ public class WindNovel implements Serializable, BaseVo {
    * 小说分组
    */
   @TableField("novelGroup")
-  private String NovelGroup;
+  private String novelGroup;
 }
